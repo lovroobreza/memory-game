@@ -4,7 +4,7 @@ const container = document.querySelector('.fireworks-container')
 
 const fireworks = new Fireworks(container)
 
-addEventListener('click', ()=>{
+window.addEventListener('click', ()=>{
     console.log(fireworks);
 })
 
@@ -109,12 +109,12 @@ const checkCards = (e) =>{
             lives--
             playerLives.textContent = lives
             if(lives === 0){
-                restart(`${player} je gej`)
+                restart(`${player} lost`)
             } 
         }}
 
     if(toggleCards.length === 16){
-        restart(`${player} je gej`)
+        restart(`${player} won`)
     }
 }
 
