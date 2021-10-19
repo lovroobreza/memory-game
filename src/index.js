@@ -1,16 +1,9 @@
-const { Fireworks } = require("fireworks-js")
-
-const container = document.querySelector('.fireworks-container')
-
-const fireworks = new Fireworks(container)
-
-window.addEventListener('click', ()=>{
-    console.log(fireworks);
-})
-
-const form = document.querySelector('#form')
-const input = document.querySelector('input')
-const button = document.querySelector('button')
+const form = document.querySelector('#form'),
+input = document.querySelector('input'),
+button = document.querySelector('button'),
+section = document.querySelector('.section'),
+h1 = document.querySelector('h1'),
+h2 = document.querySelector('h2')
 
 let player
 
@@ -18,16 +11,18 @@ form.addEventListener('submit', (e)=> e.preventDefault())
 
 button.addEventListener('click', ()=> {
     player = input.value 
-    form.style.display = 'none'
+    form.classList.add('hide')
+
+    h1.classList.remove('hide')
+    h2.classList.remove('hide')
+    section.classList.remove('hide')
 })
 
-const section = document.querySelector('.section')
 const playerLives = document.querySelector('.player-lives')
 
 let lives = 10
 playerLives.textContent = lives
 
-//const player = prompt('whats your name')
 
 //getting data
 const getData = () => [
@@ -109,7 +104,7 @@ const checkCards = (e) =>{
             lives--
             playerLives.textContent = lives
             if(lives === 0){
-                restart(`${player} lost`)
+                restart(`Sorry ${player}, you lost. Better luck next time loser`)
             } 
         }}
 

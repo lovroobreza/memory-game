@@ -26,6 +26,10 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.hide {
+  display: none;
+}
+
 .card {
   position: relative;
   transform-style: preserve-3d;
