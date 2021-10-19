@@ -109,7 +109,7 @@ const checkCards = (e) =>{
         }}
 
     if(toggleCards.length === 16){
-        restart(`${player} won`)
+        restart(`You beat me this time ${player}. You are still a loser though.`)
     }
 }
 

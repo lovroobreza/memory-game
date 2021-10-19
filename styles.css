@@ -26,6 +26,34 @@ h2 {
   margin-bottom: 2rem;
 }
 
+form {
+  position: relative;
+  padding: 2.5rem;
+}
+
+form > label {
+  font-size: 2rem;
+  position: absolute;
+  top: -1rem;
+  left: 2.5rem;
+  white-space: nowrap;
+}
+
+form > input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: green;
+}
+
+form > button {
+  transform: translateY(-2px);
+  padding: 1.3rem;
+  border-radius: 1rem;
+  background: green;
+  margin-left: 1rem;
+  color: white;
+}
+
 .hide {
   display: none;
 }
